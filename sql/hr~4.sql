@@ -1,0 +1,18 @@
+ SELECT numdog, TO_CHAR(DATE_PLAT,'yyyy')год,TO_CHAR(DATE_PLAT,'mm')мес€ц, summ
+from credits,
+(select sum(summa) summ, count(summa) numm
+from credits
+where numdog='1') 
+where numdog='1' 
+;
+
+
+
+select summ/numm  from
+(select sum(summa) summ, count(summa) numm
+from credits
+where numdog='1') 
+
+
+
+ 
